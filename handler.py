@@ -1,6 +1,10 @@
 import sys
 import time
 import json
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger(__name__)
 
 def get_stdin():
     # extract the lines
@@ -16,10 +20,10 @@ def get_stdin():
     
     # serialize to a JSON formatted string 
     str_rep = json.dumps(result)
-    print str_rep
+    log.debug('Received Message: ' + str_rep)
+    log.debug('Sleeping for 50 miliseonds!.')
+    time.sleep(0.05)
+    log.debug( 'Sleeping completed.')
 
 if(__name__ == "__main__"):
     st = get_stdin()
-    print 'Sleeping for 50 miliseonds!.'
-    time.sleep(0.05)
-    print 'Sleeping completed.'
