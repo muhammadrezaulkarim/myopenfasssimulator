@@ -21,8 +21,8 @@ def get_stdin():
     # serialize to a JSON formatted string 
     str_rep = json.dumps(result)
     log.debug('Received Message: ' + str_rep)
-    log.debug('Sleeping for 10 miliseonds!.')
-    time.sleep(0.01)
+    log.debug('Sleeping for 25 miliseonds!.')
+    time.sleep(0.025)
     log.debug( 'Sleeping completed.')
 
 if(__name__ == "__main__"):
