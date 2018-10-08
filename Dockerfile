@@ -5,9 +5,9 @@ RUN chmod +x /usr/bin/fwatchdog
 
 WORKDIR /root/
 
-COPY handler.py .
+COPY index.py .
 
-ENV fprocess="python handler.py"
+ENV fprocess="python index.py"
 
 HEALTHCHECK --interval=1s CMD [ -e /tmp/.lock ] || exit 1
 
